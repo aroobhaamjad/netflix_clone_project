@@ -1,14 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import Signup from './pages/Signup';
-import Login from './pages/Login';
-import Netflix from './pages/Netflix';
-import Card from './components/Card';
-import Slider from './components/Slider';
-import MyList from './pages/MyList'
+import React, { useState } from "react";
+import Card from "./Card";
+import {MdChevronLeft, MdChevronRight} from 'react-icons/md'
 
-function App() {
-  const cardData = [
+const Slider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const data = [
     {title: "The Dictator", time:"1h 56m" ,genre:"Comedy", imageUrl: "/src/netflixappimgs/card.jpg", addToList: false },
     {title: "Purple Hearts", time:"1h 32m" , genre:"Romance", imageUrl: "/src/netflixappimgs/card.jpg", addToList: false },
     {title: "The Invitation", time:"2h 12m",genre:"Horror", imageUrl: "/src/netflixappimgs/card.jpg", addToList: true },
@@ -40,12 +37,29 @@ function App() {
     {title: "Finding Nemo", time:"1h 32m" , genre:"Animated", imageUrl: "/src/netflixappimgs/card.jpg", addToList: false },
     {title: "Toy Story", time:"1h 32m",genre:"Animated", imageUrl: "/src/netflixappimgs/card.jpg", addToList: false },
 ];
+  const slideLeft = () => {
+    let slider = document.querySelector('#slider')
+    slider.scrollLeft -= 500
+  }
   
+  const slideRight = () => {
+    let slider = document.querySelector('#slider')
+    slider.scrollLeft += 500
+  }
+
   return (
     <div>
-      <Netflix cardData={cardData}/>
+      <div className="relative flex items-center">
+        <MdChevronLeft onClick={slideLeft} size={30} />
+        <div id="slider" className="w-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide">
+          {data.map((card, index) => (
+            <Card key={index} data={card} isActive={index === currentIndex} />
+          ))}
+        </div>
+        <MdChevronRight onClick={slideRight} size={30} />
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+export default Slider;

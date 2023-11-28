@@ -1,0 +1,27 @@
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    width: 350px;
+  }
+  
+  .slider-button {
+    position: absolute;
+    top: 40%;
+    background-color:#01000141 ;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .slider-button.prev {
+    left: 10px;
+  }
+  
+  .slider-button.next {
+    right: 10px;
+  }

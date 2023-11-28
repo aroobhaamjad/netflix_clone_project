@@ -1,0 +1,16 @@
+h2{
+    color: white;
+    margin-left: 50px;
+    margin-bottom: 60px;
+}
+
+.main{
+    margin-top: 120px;
+    margin-left: 0px;
+}
+
+.my-list-container{
+    margin-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}

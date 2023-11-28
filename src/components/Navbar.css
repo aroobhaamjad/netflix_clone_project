@@ -1,0 +1,65 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  .navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+  
+  .left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 140px;
+    margin-right: 20px;
+    margin-top: 0px
+  }
+  
+  a {
+    color: white !important;
+    text-decoration: none;
+    margin-left: 50px;
+    margin-top: 35px;
+  }
+  
+  a:hover {
+    color: grey !important;
+  }
+
+  .afirst{
+    margin-left: 180px;
+  }
+  
+  .right {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .iconsearch {
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 18px; 
+  }
+  
+  .iconoff{
+    color: red;
+    cursor: pointer;
+    margin-right: 40px;
+    font-size: 18px; 
+  }
+
+  .iconsearch:hover, .iconoff:hover  {
+    color: grey;
+  }
+  

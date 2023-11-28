@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+.mainshow {
+    position: relative;
+  }
+
+  .mainbg {
+    width: 100%;
+    height: auto;
+  }
+
+  .title {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .maintitle {
+    width: 420px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    margin-top: 40px;
+  }
+
+  .moreinfo {
+    background-color: #464C56;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 180px;
+  }
+
+  .play {
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-right: 20px;
+    margin-left: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 180px;
+  }
+
+  .play:hover,
+  .moreinfo:hover {
+    background-color: gray;
+  }
+
+  FaPlay {
+    color: black;
+  }
+
+  FaInfoCircle {
+    color: white;
+  }
+
+  h4{
+    color: white;
+    padding: 20px;
+    font-weight: bold;
+  }
+
+}
