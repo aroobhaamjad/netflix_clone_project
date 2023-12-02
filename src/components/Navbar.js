@@ -8,10 +8,10 @@ function Navbar() {
     <nav className="navbar">
       <div className="left">
         <img src={logo} alt="Netflix" className="logo" />
-        <a href="#" className="afirst">Home</a>
-        <a href="#">TV Shows</a>
-        <a href="#">Movies</a>
-        <a href="#">My List</a>
+        <a href="/home" className="afirst">Home</a>
+        <a href="/tvshows">TV Shows</a>
+        <a href="/movies">Movies</a>
+        <a href="/mylist">My List</a>
       </div>
       <div className="right">
         <div className="iconsearch" onClick={() => console.log("Search clicked")}>

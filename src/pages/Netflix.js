@@ -5,9 +5,8 @@ import homeTitle from "../netflixappimgs/homeTitle.webp"
 import {FaPlay, FaInfoCircle} from "react-icons/fa"
 import "../pages/Netflix.css"
 import Slider from "../components/Slider";
-import Card from "../components/Card";
 
-function Netflix({cardData}){
+function Netflix(){
 
     return (
         <div>

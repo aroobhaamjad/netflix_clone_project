@@ -2,8 +2,9 @@ import React from "react";
 import Card from "../components/Card";
 import "./MyList.css";
 import Navbar from "../components/Navbar";
+import cardData from "../components/cardData"
 
-function MyList({ cardData }) {
+function MyList() {
   const myListData = cardData.filter((card) => card.addToList);
 
   return (

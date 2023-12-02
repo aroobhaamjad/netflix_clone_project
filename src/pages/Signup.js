@@ -5,6 +5,14 @@ import logo from '../netflixappimgs/logo.png';
 function Signup() {
     const [showPassword, setShowPassword] = useState(false);
 
+    const changePagetoHome = () => {
+        window.location.href = "http://localhost:3000/home";
+    }
+
+    const changePagetoSignin = () => {
+        window.location.href = "http://localhost:3000/";
+    }
+
     let fields;
 
     if (showPassword) {
@@ -30,8 +38,8 @@ function Signup() {
             <p>Watch anywhere. Cancel anytime.</p>
             <p>Ready to watch? Enter your email to create or restart your membership.</p>
             {fields}
-            <button type="submit" className="signUp">Sign Up</button>
-            <button type="submit" className="signIn">Sign In</button>
+            <button type="button" className="signUp" onClick={changePagetoHome}>Sign Up</button>
+            <button type="button" className="signIn" onClick={changePagetoSignin}>Sign In</button>
         </div>
     );
 }

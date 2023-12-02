@@ -3,6 +3,11 @@ import logo from '../netflixappimgs/logo.png'
 import './Login.css'
 
 function Login(){
+
+    const changePagetoHome = () => {
+        window.location.href = "http://localhost:3000/home";
+    }
+
     return(
         <div className="login">
             <img src={logo} alt="Netflix" className="logo"></img>
@@ -10,17 +15,17 @@ function Login(){
                 <p className="heading">Sign In</p>
                 <input type="email" id="loginemail" placeholder="Email or phone number"></input>
                 <input type="password" id="loginpassword" placeholder="Password"></input>
-                <button type="submit" className="loginBtn">Sign In</button>
+                <button type="button" className="loginBtn" onClick={changePagetoHome}>Sign In</button>
                 <div className="rem">
                     <div>
                         <input type="checkbox" id="RememberMe" name="RememberMe"></input>
                         <label for="RememberMe">Remember me</label>
                     </div>
-                    <a href="#" className="needHelp">Need help?</a>
+                    <p className="needHelp">Need help?</p>
                 </div>
                 <div className="signuprow">
                     <p className="newToNetflix">New to Netflix?</p>
-                    <a href="#" className="signupNow">Sign up now.</a>
+                    <a href="/signup" className="signupNow">Sign up now.</a>
                 </div>
                 <p className="recaptchaLine">This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.</p>
             </form>

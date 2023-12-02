@@ -61,7 +61,7 @@ body {
 }
 
 .loginBtn {
-  background-color: red;
+  background-color: red  !important;
   color: white;
   text-align: center;
   height: 52px;
@@ -89,6 +89,7 @@ body {
 .newToNetflix {
   color: #737373;
   font-size: 17px;
+  margin-top: 35px;
 }
 
 .signupNow {
@@ -113,10 +114,14 @@ body {
   justify-content: center;
 }
 
-a {
+a{
   color: white;
   text-decoration: none;
   cursor: pointer;
+}
+
+.needHelp {
+  font-size: medium;
 }
 
 label{
